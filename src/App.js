@@ -45,6 +45,12 @@ function App() {
     }, 0);
   }
 
+  function updateTodoAtIndex(e, i) {
+    const newTodos = [...todos];
+    newTodos[i].content = e.target.value;
+    setTodos(newTodos);
+  }
+
   return (
     <div className="app">
       <div className="header">
@@ -58,6 +64,7 @@ function App() {
               <input
                 type="text"
                 value={todo.content}
+                onChange={e => updateTodoAtIndex(e, i)}
                 onKeyDown={e => handleKeyDown(e, i)}
               />
             </div>
