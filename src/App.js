@@ -59,7 +59,7 @@ function App() {
       <form className="todo-list">
         <ul>
           {todos.map((todo, i) => (
-            <div className="todo">
+            <div className="todo" key={i}>
               <div className="checkbox" />
               <input
                 type="text"
