@@ -20,6 +20,13 @@ body {
   pointer-events: none;
 }
 
+h1 {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 0;
+}
+
 .todo-list {
   display: flex;
   flex-direction: column;
