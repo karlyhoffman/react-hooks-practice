@@ -98,3 +98,21 @@ input {
     transform: rotate(360deg);
   }
 }
+
+.button-default {
+  display: block;
+  margin: 30px auto;
+  padding: 5px 10px;
+}
+
+.modal-wrapper {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: #fff;
+  padding: 30px;
+}
