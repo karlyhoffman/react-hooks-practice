@@ -4,7 +4,8 @@ body {
 }
 
 .app {
-  padding-top: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
 .header {
@@ -14,17 +15,40 @@ body {
   justify-content: center;
 }
 
+section {
+  position: relative;
+  padding: 35px 15px 50px;
+}
+
+section:not(:last-of-type)::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 7.5vw;
+  right: 7.5vw;
+  bottom: 0;
+  height: 1px;
+  background-color: white;
+}
+
 .logo {
   animation: App-logo-spin infinite 20s linear;
   height: 20vmin;
   pointer-events: none;
 }
 
-h1 {
+h1, h2 {
   color: #fff;
-  font-size: 3rem;
   text-align: center;
   margin-bottom: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
 }
 
 .todo-list {
@@ -115,4 +139,11 @@ input {
   height: 80vh;
   background-color: #fff;
   padding: 30px;
+}
+
+.infinite-list {
+  display: block;
+  color: #fff;
+  text-align: center;
+  width: 100%;
 }
