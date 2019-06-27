@@ -71,7 +71,7 @@ function Todo() {
         <form className="todo-list">
             <ul>
                 {todos.map((todo, i) => (
-                    <div className={`todo ${todo.isCompleted && 'todo-is-completed'}`}>
+                    <div key={i} className={`todo ${todo.isCompleted && 'todo-is-completed'}`}>
                         <div className={'checkbox'} onClick={() => toggleTodoCompleteAtIndex(i)}>
                             {todo.isCompleted && (
                                 <span>&#x2714;</span>
