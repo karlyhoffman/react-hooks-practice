@@ -20,6 +20,17 @@ section {
   padding: 35px 15px 50px;
 }
 
+section:nth-child(4) {
+  color: white;
+  line-height: 2;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section:nth-child(4) h2 {
+  margin-bottom: 40px;
+}
+
 section:not(:last-of-type)::after {
   content: "";
   display: block;
@@ -37,7 +48,7 @@ section:not(:last-of-type)::after {
   pointer-events: none;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: #fff;
   text-align: center;
   margin-bottom: 0;
@@ -49,6 +60,10 @@ h1 {
 
 h2 {
   font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 .todo-list {
@@ -146,4 +161,40 @@ input {
   color: #fff;
   text-align: center;
   width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+  .img-col.left .sticky-cont.fixed {
+    left: 0;
+    right: 50vw;
+  }
+
+  .img-col.right .sticky-cont.fixed {
+    left: 50vw;
+    right: 0;
+  }
+
+  .sticky-cont {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    max-height: 100%;
+  }
+
+  .sticky-cont.above {
+    top: 0;
+  }
+
+  .sticky-cont.fixed {
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    bottom: 0;
+  }
+
+  .sticky-cont.below {
+    bottom: 0;
+  }
 }
